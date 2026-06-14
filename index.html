@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArCo KG Enrichment</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/aos.css?ver=1.1.0" rel="stylesheet">
+    <link href="css/bootstrap.min.css?ver=1.1.0" rel="stylesheet">
+    <link href="css/main.css?ver=1.1.0" rel="stylesheet">
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body id="top">
+    <header>
+      <div class="profile-page sidebar-collapse burger-menu">
+        <nav class="navbar fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+          <div class="container">
+            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">ArCo KG Enrichment</a>
+              <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#topic">Topic</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#methodology">Methodology</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#sparql-results">SPARQL &amp; Results</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#identifying-gaps">Identifying Gaps</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#LLM-Prompting">LLM Prompting</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#RDF-Triples">RDF Triples</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#conclusion">Conclusion</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="page-content">
+      <div>
+<div class="profile-page">
+  <div class="wrapper">
+    <div class="page-header page-header-small" filter-color="green">
+      <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg')"></div>
+      <div class="container">
+        <div class="content-center">
+          <div class="cc-profile-image">
+              <a href="#"><img src="images/Mona.png" alt="Image"/></a>
+              <a href="#"><img src="images/Marta.png" alt="Image"/></a>
+              <a href="#"><img src="images/Martina.png" alt="Image"/></a>
+              <a href="#"><img src="images/Abtin.png" alt="Image"/></a>
+              <a href="#"><img src="images/Lara.png" alt="Image"/></a>
+              <a href="#"><img src="images/mahsa.png" alt="Image"/></a>
+            </div>
+          <div class="h2 title">Group Members</div>
+            <p class="category text-white">Mona Ambrosio, Marta Gallato, Martina Nicolosi, Abtin Safavipour, Lara Scallela, Mahsa Sotude</p>
+
+            <a class="btn btn-primary smooth-scroll" href="#members-information" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Members' Info</a>
+
+            <div class="mt-3">
+              <a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="GitHub">
+                 <i class="fa fa-github"></i>
+               </a>
+              </div>       
+            </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+<div class="section" id="topic">
+  <div class="container">
+    <div class="card" data-aos="fade-up" data-aos-offset="10">
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <div class="card-body">
+            <div class="h4 mt-0 title">Topic</div>
+            <p>The aim of our choice was to enrich the knowledge graph with information about a female artist from Bologna who is less known. We wanted to provide the knowledge graph with further biographical information and artworks about Carlotta Gargalli.</p>
+    
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <div class="card-body">
+              <div class="h4 mt-0 title" id="members-information">Information of the Group Members</div>            <div class="row">
+              <div class="col-sm-4"><strong class="text-uppercase">Names:</strong></div>
+              <div class="col-sm-8">Mona Ambrosio, Marta Gallato, Martina Nicolosi, Abtin Safavipour, Lara Scallela, Mahsa Sotude</div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
+              <div class="col-sm-8">mona.ambrosio[at]studio.unibo.it, marta.gallato[at]studio.unibo.it, martina.nicolosi[at]studio.unibo.it, abtin.safavipour[at]studio.unibo.it, lara.scallela[at]studio.unibo.it, mahsa.sotude[at]studio.unibo.it</div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">degree Program:</strong></div>
+              <div class="col-sm-8">Master's in Language, Society and Communication</div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">course:</strong></div>
+              <div class="col-sm-8">B5291: Knowledge Engeneering and Computation for the Humanities (LM) I.C.</div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-4"><strong class="text-uppercase">Lorem ipsum</strong></div>
+              <div class="col-sm-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="methodology">
+  <div class="container">
+    <div class="card" data-aos="fade-up" data-aos-offset="10">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <div class="h5">Methodology</div>
+              <p>
+                Our project follows the <strong>Enriching a Knowledge Graph</strong> track and focuses on
+                Carlotta Gargalli, a 19th-century Bolognese painter represented in ArCo.
+                The methodology combines SPARQL exploration, LLM-assisted information extraction,
+                manual verification, and RDF triple design.
+              </p>
+
+              <h6><strong>1. Selecting the Topic</strong></h6>
+              <p>
+                We chose Carlotta Gargalli, a 19th-century Bolognese painter, because she is present
+                in ArCo but appears to be documented less fully than her father, Filippo Gargalli.
+                This made her a suitable case for a gap-based enrichment project.
+              </p>
+
+              <h6><strong>2. Initial Exploration of ArCo</strong></h6>
+              <p>
+                We used the ArCo SPARQL endpoint to search for existing data about Carlotta Gargalli.
+                Since we did not initially know her Agent IRI, we first searched for cultural properties
+                whose labels contained the word "Gargalli".
+              </p>
+
+              <h6><strong>3. Finding the Agent IRI</strong></h6>
+              <p>
+                After finding the painting <em>Madonna con Bambino</em>, we followed the authorship
+                relation <code>a-cd:hasAuthor</code> to identify Carlotta Gargalli's Agent IRI.
+                We verified the result by checking the agent's <code>rdfs:label</code>.
+              </p>
+
+              <h6><strong>4. Building SPARQL Queries</strong></h6>
+              <p>
+                We developed seven SPARQL queries using key SPARQL features such as
+                <code>DISTINCT</code>, <code>FILTER</code>, <code>REGEX</code>,
+                <code>UNION</code>, <code>OPTIONAL</code>, <code>ORDER BY</code>,
+                <code>LIMIT</code>, <code>SAMPLE</code>, and <code>GROUP BY</code>.
+                These queries helped us move from a general search to a more precise analysis of
+                authorship, agent data, and missing information.
+              </p>
+
+              <h6><strong>5. Analyzing the Query Results</strong></h6>
+              <p>
+                We examined the query outputs to understand what ArCo already contains.
+                The results showed that Carlotta Gargalli is linked to one work in ArCo,
+                while Filippo Gargalli is linked to four works. The queries also showed that
+                Carlotta's record lacks precise biographical information and does not explicitly
+                represent her family relationship with Filippo.
+              </p>
+
+              <h6><strong>6. Identifying Knowledge Gaps</strong></h6>
+              <p>
+                From the SPARQL results, we identified the main gaps to be enriched:
+                Carlotta's missing birth date and birthplace, the missing father-daughter
+                relationship between Carlotta and Filippo Gargalli, and the limited representation
+                of other works attributed to Carlotta.
+              </p>
+
+              <h6><strong>7. Prompt Engineering for LLMs</strong></h6>
+              <p>
+                We used three prompting strategies with three LLMs: ChatGPT, Claude, and Gemini.
+                We first used these strategies to collect and compare information about Carlotta
+                Gargalli's most important paintings, including a zero-shot prompt, a few-shot
+                catalog-style prompt, and a chain-of-thought prompt focused on her artistic phases.
+              </p>
+
+              <h6><strong>8. Generating RDF Enrichment</strong></h6>
+              <p>
+                We then created a second set of targeted prompts asking the three LLMs to generate
+                SPARQL CONSTRUCT queries. These prompts focused on the identified gaps:
+                Carlotta's birth information, her relationship with Filippo Gargalli,
+                and authorship information for her additional works.
+              </p>
+
+              <h6><strong>9. Comparing LLM Outputs</strong></h6>
+              <p>
+                We compared the outputs from ChatGPT, Claude, and Gemini to evaluate their accuracy,
+                structure, and usefulness for RDF enrichment, checking whether the models used the
+                correct IRIs, valid SPARQL syntax, and appropriate predicates, and whether they
+                avoided inventing new resources.
+              </p>
+
+              <h6><strong>10. Manual Verification</strong></h6>
+              <p>
+                The LLM outputs were not accepted automatically. We manually checked the proposed
+                triples and CONSTRUCT queries against the SPARQL evidence, historical sources,
+                and the structure of ArCo. Incorrect facts, invalid syntax, and unsupported IRIs
+                were corrected or discarded.
+              </p>
+
+              <h6><strong>11. RDF Triple Design</strong></h6>
+              <p>
+                We selected the best validated outputs and transformed them into final proposed RDF
+                triples, designed to enrich ArCo with Carlotta Gargalli's birth information,
+                her family relationship with Filippo Gargalli, and additional authorship-related information.
+              </p>
+
+              <h6><strong>12. Website Creation</strong></h6>
+              <p>
+                We created a project website to present the topic, methodology, SPARQL queries,
+                prompts, LLM comparison, RDF triples, challenges, and conclusions in a clear and
+                accessible way.
+              </p>
+
+              <h6><strong>13. Publishing Online</strong></h6>
+              <p>
+                The final website was prepared for publication through GitHub Pages, making the
+                project available as an open educational resource and allowing others to evaluate
+                our findings.
+              </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="sparql-results">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 ml-auto mr-auto">
+        <div class="h4 text-center mb-4 title">SPARQL &amp; Results</div>
+        <div class="nav-align-center">
+          <ul class="nav nav-pills nav-pills-primary" role="tablist">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#web-development" role="tablist"><i class="fa fa-laptop" aria-hidden="true"></i></a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#graphic-design" role="tablist"><i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Photography" role="tablist"><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content gallery mt-5">
+      <div class="tab-pane active" id="web-development">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+              <div class="cc-porfolio-image img-raised">
+                <a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E++PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E++PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E++SELECT+DISTINCT+%3Fcp+%3Flabel++WHERE+%7B++%3Fcp+a+arco%3AHistoricOrArtisticProperty+%3B++rdfs%3Alabel+%3Flabel+.++FILTER%28REGEX%28%3Flabel%2C+%22Gargalli%22%2C+%22i%22%29%29++%7D++LIMIT+50%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" target="_blank">
+                  <img src="images/query-1.png" alt="SPARQL query 1"/>
+                </a>
+              </div>
+            </div>
+           <div class="col-md-6 mb-4">
+            <div class="cc-porfolio-image img-raised">
+              <a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E++PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E++PREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E++PREFIX+agent%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2F%3E++SELECT+*++WHERE+%7B++%3FculturalProperty+a+arco%3AHistoricOrArtisticProperty+%3B++rdfs%3Alabel+%3Flabel++%7B+%3FculturalProperty+a-cd%3AhasAuthor+agent%3Aa9051e8841a3b9b422fea43b7e1b0fbd+%7D++UNION++%7B+%3FculturalProperty+a-cd%3AhasAuthor+agent%3A05ed006268780f01cc300b7140cd3885+%7D++%7D+&format=text%2Fhtml&timeout=0&signal_void=on" target="_blank">
+                <img src="images/query-2.png" alt="SPARQL query 2"/>
+              </a>
+            </div>
+          </div>
+           <div class="col-md-6 mb-4">
+            <div class="cc-porfolio-image img-raised">
+              <a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E+PREFIX+agent%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2F%3E+PREFIX+clv%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E+PREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E+PREFIX+cpv%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCPV%2F%3E+SELECT+DISTINCT*+WHERE+%7B+%3FculturalProperty+a-cd%3AhasAuthor+%3Fauthor+%3B+rdfs%3Alabel+%3Ftitle+.+%3Fauthor+rdfs%3Alabel+%3FauthorName+%7B+%3FculturalProperty+a-cd%3AhasAuthor+agent%3Aa9051e8841a3b9b422fea43b7e1b0fbd+%7D+UNION+%7B+%3FculturalProperty+a-cd%3AhasAuthor+agent%3A05ed006268780f01cc300b7140cd3885+%7D+%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" target="_blank">
+                <img src="images/query-3.png" alt="SPARQL query 3"/>
+              </a>
+            </div>
+          </div>
+           <div class="col-md-6 mb-4">
+            <div class="cc-porfolio-image img-raised">
+              <a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E+PREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E+PREFIX+agent%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2F%3E+PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+SELECT+DISTINCT+%3FculturalProperty+%3Ftitle+%3Fauthor+%28SAMPLE%28%3FauthorName%29+AS+%3FauthorName%29+WHERE+%7B+%3FculturalProperty+a-cd%3AhasAuthor+%3Fauthor+%3B+rdfs%3Alabel+%3Ftitle+.+%3Fauthor+rdfs%3Alabel+%3FauthorName+.+%7B+%3FculturalProperty+a-cd%3AhasAuthor+agent%3Aa9051e8841a3b9b422fea43b7e1b0fbd+%7D+UNION+%7B+%3FculturalProperty+a-cd%3AhasAuthor+agent%3A05ed006268780f01cc300b7140cd3885+%7D+FILTER%28LANG%28%3Ftitle%29+%3D+%22it%22+%7C%7C+LANG%28%3Ftitle%29+%3D+%22%22%29+%7D%0D%0AGROUP+BY+%3FculturalProperty+%3Ftitle+%3Fauthor&format=text%2Fhtml&timeout=0&signal_void=on" target="_blank">
+                <img src="images/query-4.png" alt="SPARQL query 4"/>
+              </a>
+            </div>
+          </div>
+           <div class="col-md-6 mb-4">
+            <div class="cc-porfolio-image img-raised">
+              <a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E+PREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E+PREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E+SELECT+DISTINCT+%3Ftype+%3Flabel+WHERE+%7B+%3Fattribution+a+owl%3AThing+%3B+a+%3Ftype+.+%3Ftype+rdfs%3Alabel+%3Flabel+.+FILTER%28REGEX%28%3Flabel%2C+%22Authorship%22%2C+%22i%22%29+%7C%7C+REGEX%28%3Flabel%2C+%22Attribution%22%2C+%22i%22%29+%7C%7C+REGEX%28%3Flabel%2C+%22Attribuzione%22%2C+%22i%22%29%29+%7D+ORDER+BY+ASC%28%3Ftype%29+LIMIT+50&format=text%2Fhtml&timeout=0&signal_void=on" target="_blank">
+                <img src="images/query-5.png" alt="SPARQL query 5"/>
+              </a>
+            </div>
+          </div>
+           <div class="col-md-6 mb-4">
+            <div class="cc-porfolio-image img-raised">
+              <a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdfs%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+a-cd%3A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+agent%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fagent+%3Flabel+%3FagentDate%0D%0AWHERE+%7B%0D%0A++%3Fagent+rdfs%3Alabel++++%3Flabel+%3B%0D%0A+++++++++a-cd%3AagentDate+%3FagentDate+.%0D%0A%0D%0A++FILTER%28+%3Fagent+%3D+agent%3Aa9051e8841a3b9b422fea43b7e1b0fbd+%7C%7C%0D%0A++++++++++%3Fagent+%3D+agent%3A05ed006268780f01cc300b7140cd3885+%29%0D%0A%0D%0A++FILTER%28LANG%28%3Flabel%29+%3D+%22it%22+%7C%7C+LANG%28%3Flabel%29+%3D+%22%22%29%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on" target="_blank">
+                <img src="images/query-6.png" alt="SPARQL query 6"/>
+              </a>
+            </div>
+          </div>
+           <div class="col-md-6 mb-4">
+            <div class="cc-porfolio-image img-raised">
+              <a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+agent%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2F%3E%0D%0APREFIX+bio%3A+++%3Chttp%3A%2F%2Fpurl.org%2Fvocab%2Fbio%2F0.1%2F%3E%0D%0A+%0D%0ASELECT+DISTINCT+%3Fagent+%3FbirthPlace%0D%0AWHERE+%7B%0D%0A++VALUES+%3Fagent+%7B%0D%0A++++agent%3Aa9051e8841a3b9b422fea43b7e1b0fbd%0D%0A++++agent%3A05ed006268780f01cc300b7140cd3885%0D%0A++%7D%0D%0A++OPTIONAL+%7B+%3Fagent+bio%3AbirthPlace+%3FbirthPlace+%7D%0D%0A%7D%0D%0A%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" target="_blank">
+                <img src="images/query-7.png" alt="SPARQL query 7"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="graphic-design" role="tabpanel">
+      <div class="row">
+        <div class="col-md-6" style="margin-bottom:1cm;">
+  <div class="sparql-explanation">
+    <h4>Explanation 1</h4>
+    <p>
+
+      We started with this query to get general information about Carlotta Gargalli in ArCo.
+      We wanted to see how many Historic or Artistic Properties existed in ArCo for her, so
+      we used <code>FILTER</code> and <code>REGEX</code> to search for "Gargalli".
+      We limited the results to 50 with <code>LIMIT 50</code>.
+    </p>
+    <p>
+      We used <code>DISTINCT</code> to remove duplicate rows caused by bilingual labels on
+      the same resource. The results revealed the presence of another agent, Filippo Gargalli,
+      who we later identified through our LLM prompts that he is her father. This first query already
+      shows an imbalance: Carlotta has a single catalogued work, while Filippo has four.
+      This was the starting point of our investigation.
+    </p>
+  </div>
+</div>
+        <div class="col-md-6" style="margin-bottom:1cm;">
+  <div class="sparql-explanation">
+    <h4>Explanation 2</h4>
+    <p>
+      We wanted to get information about the artistic properties of Carlotta and Filippo Gargalli.
+      We used <code>UNION</code> to combine two graph patterns and used <code>SELECT *</code>
+      to explore what information was available without committing to specific columns yet.
+    </p>
+    <p>
+      With this more specific query, we confirmed that Carlotta has a single catalogued work,
+      while Filippo has four. By looking at these artistic properties, we also found the Agent
+      IRIs for both of them in ArCo.
+    </p>
+  </div>
+
+</div>
+        <div class="col-md-6" style="margin-bottom:1cm;">
+  <div class="sparql-explanation">
+    <h4>Explanation 3</h4>
+    <p>
+      We used <code>UNION</code> to retrieve works authored by either Carlotta Gargalli or
+      Filippo Gargalli in a single query. We combined it with <code>DISTINCT</code> to avoid
+      exact duplicate rows in the result table.
+    </p>
+    <p>
+      Information about each artwork is provided both in English and in Italian, and since ArCo
+      stores multilingual and repeated labels, <code>DISTINCT</code> alone was not enough to
+      produce a fully clean table. This motivated the language filtering we introduced in Query 4.
+    </p>
+  </div>
+</div>
+       <div class="col-md-6" style="margin-bottom:1cm;">
+  <div class="sparql-explanation">
+    <h4>Explanation 4</h4>
+    <p>
+      Since we already knew Filippo Gargalli was present in ArCo, we wanted a cleaner comparison
+      between him and Carlotta. We used <code>DISTINCT</code> and <code>UNION</code> to get
+      information about both of their artistic works without duplicate rows.
+    </p>
+    <p>
+      We used <code>FILTER(LANG(?title) = "it" || LANG(?title) = "")</code> to only get results in Italian
+      and eliminate English duplicates. We also used <code>SAMPLE</code> and
+      <code>GROUP BY</code>: <code>GROUP BY</code> collects repeated results into groups, and
+      <code>SAMPLE()</code> chooses one value from each group, so the final table is cleaner.
+    </p>
+    <p>
+      With this query, we confirmed that the information on artworks for Carlotta and Filippo
+      Gargalli is unequal: one work for Carlotta versus four for Filippo. This becomes the
+      starting point for our enrichment proposal, especially because Carlotta's biographical
+      and family data are also missing or vaguely represented.
+    </p>
+  </div>
+</div>
+       <div class="col-md-6" style="margin-bottom:1cm;">
+  <div class="sparql-explanation">
+    <h4>Explanation 5</h4>
+    <p>
+      We used <code>FILTER(REGEX(...))</code> with "authorship", "attribution" and
+      "attribuzione" to look for ArCo classes related to artistic attribution.
+      We used <code>ORDER BY ASC</code> to get the results in ascending order.
+    </p>
+    <p>
+      We also used <code>LIMIT 50</code> because <code>owl:Thing</code> could in principle
+      match a very large number of resources. The query returns either no results, or only
+      the <code>AuthorshipAttribution</code> class.
+    </p>
+  </div>
+</div>
+       <div class="col-md-6" style="margin-bottom:1cm;">
+  <div class="sparql-explanation">
+    <h4>Explanation 6</h4>
+    <p>
+      We used <code>FILTER</code> for the two agents, Carlotta and Filippo, to obtain
+      biographical data. We used <code>FILTER(LANG(?label) = "it" || LANG(?label) = "")</code>
+      to only get results in Italian and eliminate English duplicates, as learned 
+      in Query 3.
+    </p>
+    <p>
+      We used <code>DISTINCT</code> as a final safeguard against any remaining duplicate rows.
+      We also used <code>FILTER(?agent = ... || ?agent = ...)</code> to restrict the query to
+      exactly our two agents, using their verified IRIs. This shows that ArCo's information
+      for Carlotta is extremely vague, which is why we used Query 7.
+    </p>
+  </div>
+       </div>
+        <div class="col-md-6" style="margin-bottom:1cm;">
+  <div class="sparql-explanation">
+    <h4>Explanation 7</h4>
+    <p>
+      We used <code>OPTIONAL { ?agent bio:birthPlace ?birthPlace }</code> as a gap detector:
+      if <code>bio:birthPlace</code> exists for an agent, its value is returned; if not, the row
+      is still returned with <code>?birthPlace</code> unbound, meaning empty. The row is therefore
+      not eliminated.
+    </p>
+    <p>
+      We used <code>DISTINCT</code> to avoid duplicate rows, consistent with all previous queries.
+      This shows one of our gaps: both agents exist in ArCo, yet ArCo holds zero geographic-origin
+      information for either of them, despite external sources confirming Carlotta was born in
+      Bologna.
+    </p>
+  </div>
+</div>
+
+      </div>
+</div>
+      <div class="tab-pane" id="Photography" role="tabpanel">
+        <div class="ml-auto mr-auto">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
+                  <figure class="cc-effect"><img src="images/photography-1.jpg" alt="Image"/>
+                    <figcaption>
+                      <div class="h4">Madonna con Bambino</div>
+                      <p>c. 1815–1840</p>
+                      <p>Present in the ArCo</p>
+                    </figcaption>
+                  </figure></a></div>
+              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
+                  <figure class="cc-effect"><img src="images/photography-3.jpeg" alt="Image"/>
+                    <figcaption>
+                      <div class="h4">Portrait of the de’ Bianchi Family</div>
+                      <p>1817</p>
+                      <p>Missing from the ArCo</p>
+                    </figcaption>
+                  </figure></a></div>
+            </div>
+            <div class="col-md-6">
+              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
+                  <figure class="cc-effect"><img src="images/photography-2.jpeg" alt="Image"/>
+                    <figcaption>
+                      <div class="h4">Portrait of Andrea Pizzoli </div>
+                      <p>P1806</p>
+                      <p>Missing from the ArCo</p>
+                    </figcaption>
+                  </figure></a></div>
+              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
+                  <figure class="cc-effect"><img src="images/photography-4.jpeg" alt="Image"/>
+                    <figcaption>
+                      <div class="h4">Pyrrhus Threatening to Kill Astyanax</div>
+                      <p>1815</p>
+                      <p>Missing from the ArCo</p>
+                    </figcaption>
+                  </figure></a></div>
+               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#Photography">
+                  <figure class="cc-effect"><img src="images/photography-6.jpeg" alt="Image"/>
+                    <figcaption>
+                      <div class="h4">Ajax</div>
+                      <p>1814</p>
+                      <p>Missing from the ArCo</p>
+                    </figcaption>
+                  </figure></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="identifying-gaps">
+  <div class="container cc-reference">
+    <div class="h4 mb-4 text-center title">Identifying Gaps</div>
+    <div class="card" data-aos="zoom-in">
+      <div class="carousel slide" id="cc-Indicators" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li class="active" data-target="#cc-Indicators" data-slide-to="0"></li>
+          <li data-target="#cc-Indicators" data-slide-to="1"></li>
+          <li data-target="#cc-Indicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-2 col-md-3 cc-reference-header">
+                <div class="h5 pt-2">First Gap</div>
+                <p class="category">Birthplace and Birthdate</p>
+              </div>
+              <div class="col-lg-10 col-md-9">
+                <p> Through the queries explained above, we found the first gap: Carlotta Gargalli’s birth date and birthplace are both missing. By doing a quick Google search, we easily found both pieces of information</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-2 col-md-3 cc-reference-header">
+                <div class="h5 pt-2">Second Gap</div>
+                <p class="category">Missing Artworks</p>
+              </div>
+              <div class="col-lg-10 col-md-9">
+                <p> After researching through the queries and online, we were able to find other paintings made by Carlotta Gargalli. According to ArCo, Carlotta Gargalli has painted only Madonna con bambino, whereas she has actually made other Paintings such as:  Ritratto della famiglia de' Bianchi, Pirro che minaccia di uccidere Astianatte, and Ritratto di ecclesiastico. </p>
+            </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-2 col-md-3 cc-reference-header">
+                <div class="h5 pt-2">Third Gap</div>
+                <p class="category">Relationship between Carlotta and Filippo</p>
+              </div>
+              <div class="col-lg-10 col-md-9">
+                <p> With the queries above, we were able to find another “Gargalli”: Filippo Gargalli. According to ArCo there is no link between Carlotta Gargalli and Filippo Gargalli. After some research, we were able to find out that Filippo was not only Carlotta Gargalli’s father, but also a mentor and first teacher.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="LLM-Prompting">
+  <div class="container cc-reference">
+    <div class="h4 mb-4 text-center title">LLM Prompting</div>
+    <div class="card">
+  <div class="card-body text-center">
+
+    <h3>Comparison LLM Prompting Strategies accross Chat GPT, Claude and Gemini</h3>
+
+    <p class="text-muted">
+      Click on the following icon to access the Excel file containing the results of the LLM prompting strategies comparison across Chat GPT, Claude and Gemini. The file includes detailed information on the prompts used, the responses received from each model, and an analysis of their performance in relation to the identified gaps in the ArCo dataset.
+    </p>
+    <a href="https://liveunibo-my.sharepoint.com/:x:/r/personal/mona_ambrosio_studio_unibo_it/_layouts/15/Doc.aspx?sourcedoc=%7BC530CC1D-B2F6-4BE1-8FCF-7FDE21610B92%7D&file=KE4H.xls.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&wdOrigin=WORDONLINE.SHELL%2CAPPHOME-WEB.FILEBROWSER.RECENT&wdPreviousSession=e2eb4922-a396-4c29-a75a-72842a8145f4&wdPreviousSessionSrc=AppHomeWeb&ct=1781431944979" target="_blank">
+      <img src="images/excel icon.png" alt="LLM Prompting Results" class="img-fluid rounded shadow-sm">
+    </a>
+  </div>
+</div>
+  </div>
+</div>
+<div class="section" id="RDF-Triples">
+  <div class="container cc-education">
+    <div class="h4 text-center mb-4 title">RDF Triples</div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-education-header">
+            <p>Triple of the first missing information</p>
+            <div class="h5">Birthplace and Birthdate</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Relationship between Carlotta & Filippo</div>
+            <div class="h5">Prompt for Birthplace and Birthdate RDF Triples</div>
+              <p class="category">Carlotta Gargalli – Biographical Enrichment</p>
+
+              <p>We wrote this prompt to Gemini in order to obtain the SPARQL CONSTRUCT query.</p>
+
+              <h6><strong>Task</strong></h6>
+              <p>
+                Create a SPARQL CONSTRUCT query that generates proposed RDF triples for enriching ArCo with biographical data.
+              </p>
+
+              <h6><strong>Important Context</strong></h6>
+              <ul>
+                <li>We are not directly modifying the public ArCo endpoint.</li>
+                <li>The endpoint is used to verify the existing gap and to generate proposed enrichment triples.</li>
+                <li>Do not use <code>INSERT DATA</code>.</li>
+                <li>Use <code>CONSTRUCT</code>, because it can be run on a SPARQL endpoint and returns RDF triples.</li>
+              </ul>
+
+              <h6><strong>The Gap</strong></h6>
+              <p>
+                ArCo contains Carlotta Gargalli as an agent, but it does not explicitly contain her personal biographical information.
+                The missing information is her birthplace and birthdate.
+              </p>
+
+              <h6><strong>Target Case — Carlotta Gargalli</strong></h6>
+              <ul>
+                <li><strong>Subject IRI:</strong> <code>https://w3id.org/arco/resource/Agent/a9051e8841a3b9b422fea43b7e1b0fbd</code></li>
+                <li><strong>Birthplace:</strong> Roma</li>
+                <li><strong>Birthdate:</strong> 1788-12-04</li>
+              </ul>
+
+              <h6><strong>Requirements</strong></h6>
+              <ul>
+                <li>Use SPARQL <code>CONSTRUCT</code>, not <code>INSERT DATA</code>.</li>
+                <li>Use <code>arco-core:birthDate</code> and <code>arco-core:birthPlace</code>.</li>
+                <li>Verify that the ArCo agent exists by checking its <code>rdfs:label</code>.</li>
+                <li>Do not invent new IRIs or create a new person resource.</li>
+              </ul>
+
+              
+              <h6><strong>Gemini's Result (Few-Shot Prompting)</strong></h6>
+
+<pre><code>PREFIX arco-core: &lt;https://w3id.org/arco/ontology/core/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+CONSTRUCT {
+  &lt;https://w3id.org/arco/resource/Agent/a9051e8841a3b9b422fea43b7e1b0fbd&gt;
+    arco-core:birthDate "1788-04-20" ;
+    arco-core:birthPlace "Bologna" .
+}
+WHERE {
+  &lt;https://w3id.org/arco/resource/Agent/a9051e8841a3b9b422fea43b7e1b0fbd&gt;
+    rdfs:label ?agentLabel .
+}</code></pre>
+              <div class="text-center mt-3">
+                <img src="images/gemini-fewshot-result.png"
+                    alt="Gemini Few-Shot Result"
+                    class="img-fluid img-thumbnail">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-education-header">
+            <p>Triple of the second missing information</p>
+            <div class="h5">Artistic Works</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Prompt for Artistic Works RDF Triples</div>
+              <p class="category">Carlotta Gargalli – Missing Artwork Authorship</p>
+
+              <p>
+                We wrote the following prompt to Claude to get the query for the missing artworks.
+              </p>
+
+              <h6><strong>Task</strong></h6>
+              <p>
+                Create a SPARQL CONSTRUCT query that generates proposed RDF triples for enriching ArCo.
+              </p>
+
+              <h6><strong>Important Context</strong></h6>
+              <ul>
+                <li>We are not directly modifying the public ArCo endpoint.</li>
+                <li>The endpoint is used to verify the existing gap and to generate proposed enrichment triples.</li>
+                <li>Do not use <code>INSERT DATA</code>.</li>
+                <li>Use <code>CONSTRUCT</code>, because it can be run on a SPARQL endpoint and returns RDF triples.</li>
+              </ul>
+
+              <h6><strong>The Gap</strong></h6>
+              <p>
+                ArCo only contains <em>Madonna con bambino</em> as an artwork made by Carlotta Gargalli.
+                It does not show the other paintings:
+                <em>Ritratto della famiglia de' Bianchi</em>,
+                <em>Pirro che minaccia di uccidere Astianatte</em>, and
+                <em>Ritratto di ecclesiastico</em>.
+                The missing information is that these three paintings have Carlotta Gargalli as their author.
+              </p>
+
+              <h6><strong>Target Case — Carlotta Gargalli</strong></h6>
+              <p>
+                Create a SPARQL CONSTRUCT query for the following ArCo enrichment.
+              </p>
+
+              <p><strong>Information to model:</strong></p>
+              <p>
+                <em>Madonna con bambino</em> has author Carlotta Gargalli.
+              </p>
+
+              <p><strong>ArCo IRI for Carlotta Gargalli:</strong></p>
+              <p>
+                <code>https://w3id.org/arco/resource/Agent/a9051e8841a3b9b422fea43b7e1b0fbd</code>
+              </p>
+
+              <p><strong>Wikidata QIDs for the paintings:</strong></p>
+              <ul>
+                <li><code>wd:Q132129004</code> — <em>Ritratto della famiglia de' Bianchi</em></li>
+                <li><code>wd:Q133269104</code> — <em>Pirro che minaccia di uccidere Astianatte</em></li>
+                <li><code>wd:Q137794454</code> — <em>Ritratto di ecclesiastico</em></li>
+              </ul>
+
+              <h6><strong>Requirements</strong></h6>
+              <ul>
+                <li>Use SPARQL <code>CONSTRUCT</code>, not <code>INSERT DATA</code>.</li>
+                <li>Use <code>a-cd:hasAuthor</code> to express the authorship.</li>
+                <li>Use <code>rdfs:comment</code> to explain that Filippo Gargalli was Carlotta’s father and first teacher.</li>
+                <li>In the <code>WHERE</code> clause, verify the ArCo agent by checking its <code>rdfs:label</code>.</li>
+                <li>Do not invent new IRIs.</li>
+                <li>Do not create a new cultural property resource.</li>
+                <li>Return only the SPARQL query.</li>
+              </ul>
+              <h6><strong>Result of Claude</strong></h6>
+<pre><code>PREFIX agent: &lt;https://w3id.org/arco/resource/Agent/&gt;
+PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+PREFIX a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+CONSTRUCT {
+  ?culturalProperty
+      a-cd:hasAuthor
+      agent:a9051e8841a3b9b422fea43b7e1b0fbd .
+}
+WHERE {
+  VALUES ?culturalProperty {
+      wd:Q132129004
+      wd:Q133269104
+      wd:Q137794454
+  }
+}</code></pre>
+              <div class="text-center mt-3">
+                <a href="images/claude-artistic-works-result.png" target="_blank">
+                  <img src="images/claude-artistic-works-result.png"
+                      alt="Claude Artistic Works Result"
+                      class="img-fluid img-thumbnail">
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-education-header">
+            <p>Triple of the third missing information</p>
+            <div class="h5">Relationship between Carlotta and Filippo</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Prompt for Relationship RDF Triples</div>
+              <p class="category">Carlotta Gargalli – Family Relationship Enrichment</p>
+
+              <p>
+                We asked Claude to generate a SPARQL query to add information about the relationship
+                between Carlotta Gargalli and Filippo Gargalli.
+              </p>
+
+              <h6><strong>Task</strong></h6>
+              <p>
+                Create a SPARQL CONSTRUCT query that generates proposed RDF triples for enriching ArCo.
+              </p>
+
+              <h6><strong>Important Context</strong></h6>
+              <ul>
+                <li>We are not directly modifying the public ArCo endpoint.</li>
+                <li>The endpoint is used to verify the existing gap and to generate proposed enrichment triples.</li>
+                <li>Do not use <code>INSERT DATA</code>.</li>
+                <li>Use <code>CONSTRUCT</code>, because it can be run on a SPARQL endpoint and returns RDF triples.</li>
+              </ul>
+
+              <h6><strong>The Gap</strong></h6>
+              <p>
+                ArCo contains both Carlotta Gargalli and Filippo Gargalli as agents, but it does not
+                explicitly represent their family relationship. The missing information is that
+                Carlotta Gargalli was the daughter of Filippo Gargalli, who was also her first teacher.
+              </p>
+
+              <h6><strong>Target Case — Carlotta Gargalli</strong></h6>
+
+              <p><strong>Information to model:</strong></p>
+
+              <p>
+                “Carlotta Gargalli was the daughter of Filippo Gargalli.
+                Filippo Gargalli was also her first teacher.”
+              </p>
+
+              <p><strong>Carlotta Gargalli:</strong></p>
+              <p>
+                <code>https://w3id.org/arco/resource/Agent/a9051e8841a3b9b422fea43b7e1b0fbd</code>
+              </p>
+
+              <p><strong>Filippo Gargalli:</strong></p>
+              <p>
+                <code>https://w3id.org/arco/resource/Agent/05ed006268780f01cc300b7140cd3885</code>
+              </p>
+
+              <h6><strong>Requirements</strong></h6>
+              <ul>
+                <li>Use SPARQL <code>CONSTRUCT</code>, not <code>INSERT DATA</code>.</li>
+                <li>Use <code>bio:father</code> to express the father-daughter relationship.</li>
+                <li>Use <code>rdfs:comment</code> to explain that Filippo Gargalli was Carlotta’s father and first teacher.</li>
+                <li>Verify that both ArCo agents exist by checking their <code>rdfs:label</code>.</li>
+                <li>Do not invent new IRIs.</li>
+                <li>Do not create a new person resource.</li>
+                <li>Return only the SPARQL query.</li>
+              </ul>
+
+              <h6><strong>Result of Claude</strong></h6>
+              <pre><code>
+PREFIX bio:  &lt;http://purl.org/vocab/bio/0.1/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+CONSTRUCT {
+  &lt;https://w3id.org/arco/resource/Agent/a9051e8841a3b9b422fea43b7e1b0fbd&gt;
+    bio:father
+      &lt;https://w3id.org/arco/resource/Agent/05ed006268780f01cc300b7140cd3885&gt; ;
+    rdfs:comment
+      "Carlotta Gargalli was the daughter of Filippo Gargalli, who was also her first teacher."@en .
+}
+WHERE {
+  &lt;https://w3id.org/arco/resource/Agent/a9051e8841a3b9b422fea43b7e1b0fbd&gt;
+    rdfs:label ?daughterLabel .
+
+  &lt;https://w3id.org/arco/resource/Agent/05ed006268780f01cc300b7140cd3885&gt;
+    rdfs:label ?fatherLabel .
+}</code></pre>
+
+              <div class="text-center mt-3">
+                <a href="images/claude-relationship-result.png" target="_blank">
+                  <img src="images/claude-relationship-result.png"
+                      alt="Claude Relationship Result"
+                      class="img-fluid img-thumbnail">
+                </a>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="conclusion">
+  <div class="container cc-education">
+    <div class="h4 text-center mb-4 title">Conclusion</div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-education-header">
+            <div class="h5"><p>Carlotta Gargalli</p>
+              <p>and</p>
+              <p>ArCo Knowledge Graph Enrichment</p></div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+              <p>
+                Our research focused on Carlotta Gargalli, a lesser-known yet historically significant female artist from Bologna, who lived and worked during the 18th century and made history as the first woman to be admitted to the Academy of Fine Arts in Bologna. Despite her pioneering role in Italian art history, her legacy has remained underrepresented in digital cultural heritage resources.
+              </p>
+              <p>
+                Through our research, we have demonstrated that the ArCo knowledge graph presents notable gaps in its representation of Carlotta Gargalli, leaving key aspects of her life and work insufficiently documented. To address this, we have proposed a series of targeted enrichments in the form of RDF triples, covering essential biographical information (her birth date and birthplace) as well as structured data relating to her artworks.
+              </p>
+              <p>
+                These additions aim to make her profile more complete, accurate, and discoverable within the Semantic Web ecosystem, ultimately contributing to a broader effort to ensure that women artists of the past receive the visibility they deserve.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div>
+    </div>
+    <footer class="footer">
+      <div class="container text-center">
+        <a class="btn btn-link" href="YOUR_GITHUB_LINK_HERE" target="_blank">
+          <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="h4 title text-center">Our Team</div>
+      <div class="text-center text-muted">
+          Mona Ambrosio • Marta Gallato • Martina Nicolosi • Abtin Safavipour • Lara Scallela • Mahsa Sotude
+        </div>
+      <div class="text-center text-muted mt-2">
+         <p>&copy; 2026 KE4H Project – University of Bologna</p>
+        </div>
+    </footer>
+    <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
+    <script src="js/core/popper.min.js?ver=1.1.0"></script>
+    <script src="js/core/bootstrap.min.js?ver=1.1.0"></script>
+    <script src="js/now-ui-kit.js?ver=1.1.0"></script>
+    <script src="js/aos.js?ver=1.1.0"></script>
+    <script src="scripts/main.js?ver=1.1.0"></script>
+  </body>
+</html>
